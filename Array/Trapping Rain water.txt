@@ -65,15 +65,17 @@ public:
         int high1 = 0, high2 = 0, l = 0, r = n-1;
         while(l<r)
         {
-            if (height[l] < height[r])
+            if (arr[l] < arr[r])
             {
-                high1 = max(high1, height[l]);
-                res += high1 - height[l++];
-            } else
+                high1 = max(high1, arr[l]);
+                res += high1 - arr[l++];
+            } 
+            else
             {
-                high2 = max(high2, height[r]);
-                res += high2 - height[r--];
+                high2 = max(high2, arr[r]);
+                res += high2 - arr[r--];
             }
         }
+        return res;
     }
 };
