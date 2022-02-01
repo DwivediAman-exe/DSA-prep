@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 /*
 Question Link - https://practice.geeksforgeeks.org/problems/check-for-bst/1/
 
@@ -10,6 +11,19 @@ A BST is defined as follows:
 The left subtree of a node contains only nodes with keys less than the node's key.
 The right subtree of a node contains only nodes with keys greater than the node's key.
 Both the left and right subtrees must also be binary search trees.
+
+struct Node
+{
+    int data;
+    Node *left;
+    Node *right;
+
+    Node(int val)
+    {
+        data = val;
+        left = right = NULL;
+    }
+};
 
 Input:
    2
