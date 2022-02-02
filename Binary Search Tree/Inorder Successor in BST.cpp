@@ -13,7 +13,7 @@ K(data of x) = 2
 Output: 3
 
 Method 1:
-TC-O(N) SC-O(1) :
+TC-O(H) SC-O(1) :
 */
 
 class Solution
