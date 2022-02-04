@@ -34,8 +34,60 @@ public:
         return res;
     }
 };
+
 /*
-Method 2:
+Method 2:   Divide and Conquer
+TC-O(N*Log(N)) SC - O(1)
+*/
+
+class Solution
+{
+public:
+    // arr: input array
+    // n: size of array
+    // Function to find the sum of contiguous subarray with maximum sum.
+    long long maxCrossSubarraySum(int arr[], int l, int mid, int r)
+    {
+        long long leftSum = INT_MIN, rightSum = INT_MIN, sum = 0;
+
+        for (int i = mid; i >= l; i--)
+        {
+            sum += arr[i];
+            if (sum > leftSum)
+                leftSum = sum;
+        }
+
+        sum = 0;
+
+        for (int i = mid + 1; i <= r; i++)
+        {
+            sum += arr[i];
+            if (sum > rightSum)
+                rightSum = sum;
+        }
+
+        return max({leftSum, rightSum, leftSum + rightSum});
+    }
+    long long maxSubarraySumUtil(int arr[], int l, int r)
+    {
+        if (l == r)
+            return arr[l];
+
+        int mid = l + (r - l) / 2;
+
+        return max({maxSubarraySumUtil(arr, l, mid),
+                    maxSubarraySumUtil(arr, mid + 1, r),
+                    maxCrossSubarraySum(arr, l, mid, r)});
+    }
+
+    long long maxSubarraySum(int arr[], int n)
+    {
+        return maxSubarraySumUtil(arr, 0, n - 1);
+    }
+};
+
+/*
+Method 3:
 TC-O(N) SC-O(1)
 */
 class Solution
