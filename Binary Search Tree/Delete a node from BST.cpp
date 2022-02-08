@@ -51,7 +51,7 @@ Node *deleteNode(Node *root, int x)
         {
             Node *inorder_successor = find_inorder_successor(root);
             root->data = inorder_successor->data;
-            root->right = deleteNode(inorder_successor, inorder_successor->data);
+            root->right = deleteNode(root->right, inorder_successor->data);
             return root;
         }
     }
