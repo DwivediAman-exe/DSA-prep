@@ -78,3 +78,39 @@ public:
         return dp[n][sum];
     }
 };
+/*
+Method 3:
+TC-O(N * Sum) SC-O(Sum) :
+*/
+
+class Solution
+{
+public:
+    bool isSubsetSum(vector<int> arr, int sum)
+    {
+        int n = arr.size();
+        vector<vector<bool>> dp(2, vector<bool>(sum + 1, 0));
+        int row = 0;
+
+        for (int i = 0; i <= n; i++)
+        {
+            for (int j = 0; j <= sum; j++)
+            {
+                if (j == 0)
+                    dp[row][j] = true;
+                else if (i == 0)
+                    dp[row][j] = false;
+                else
+                {
+                    if (arr[i - 1] > j)
+                        dp[row][j] = dp[1 - row][j];
+                    else
+                        dp[row][j] = dp[1 - row][j] || dp[1 - row][j - arr[i - 1]];
+                }
+            }
+            row = 1 - row;
+        }
+
+        return dp[1 - row][sum];
+    }
+};
