@@ -108,7 +108,7 @@ public:
 };
 
 /*
-Method 3:
+Method 4:
 TC-O(N * M) SC-O(M) : Tabulation (Space Optimized) (1 X M)
 */
 
