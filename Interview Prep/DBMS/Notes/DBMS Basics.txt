@@ -1,0 +1,47 @@
+Data is generally a raw format of any information. It may be text information or any rich formatted information.
+Consider you’re visiting a website, your computer downloads all the HTML, CSS and various java-script for that website and renders the page. All this is datas download.
+
+Information is nothing but that data being viewed in a structured format.
+Example, when you visited that website. The browser stores your cookies and the website based on your IP address can find the country you’re accessing the website from. 
+Thus, your IP Address which is datas becomes information when a meaning full context is applied to it.
+
+Units Of Data storage - Bit, Byte, Nibble, KB, MB, etc
+
+
+
+What is Database?
+    The database is a collection of related data, organized in a structured and meaningful way.
+    For computers, having the data stored in a way that allows faster – Storage(entry), Access, Update, Manipulation is also important than just having meaningfully sorted and stored.
+
+    Database is a most efficient and structured way of storing information together so various operations like 
+    entry, addition, updation and manipulation are very easy, along with the view format as well.
+
+
+
+What is Database Management System?
+    The database management system is software that controls all the different manipulation of stored or to be stored data in a database.
+    It allows the creation, update, manipulation, definition of a database.
+    Eg : Microsoft SQL Server, Oracle Database, MySQL, PostgreSQL and IBM Db2.
+
+    A database management system perform the following –
+        Database Definition - This essentially defines how data is defined in the database. Eg : fields in table.
+        Data Updation - This majorly allows various operations like insertion of the new data, updating new data, deletion of data in the various database tables.
+        Data Retrieval - The data is stored in various database servers and stored globally. For different instances like requesting login authentication details for a website. You need to communicate and retrieve a lot of data from database tables.
+        Administration - Database administration is important, a for a new employee who is working on database system for your company. You don’t want to give him deleting capabilities. So you create different roles like –Administrator(All Operations) , Manager(No delete, modify), Editor( Only insert )
+        Security
+
+
+
+
+File System Vs DBMS
+
+File System is an old method of storing data in set of files. It helps us to organize the data and allows easy retrieval of files when they are required whereas DBMS System is the new method of storing data in a tabular format. It consists of a group of programs that manipulate the database. 
+
+File System – Earlier the data were stored in a file format where the data is stored in one file or set of files. These files have no logical relation with one another and data is just thrown in them. With the user needing to remember the logical relationships between them on his own.
+
+Advantage Comparison
+    Data concurrency – Database concurrency is the ability of the database to support multiple users and processes working on the database concurrently. For example, an airline reservation system supports thousands of active users at any given time!
+    Data Searching
+    Data Integrity – When a data is being inserted in the database there maybe cases when, we need only a particular type of data being entered. Like RollNo should only accept int values. Such constraints are there in DBMS systems but not in File systems.
+    Data Sharing - Data sharing and access rights are easy and inbuilt in the DBMS system. But in file systems its too complex.
+    Data Redundancy and Inconsistency – Data Redundancy leads to Data Inconsistency. Example – If we have an address of someone in many tables and when we change it in only one table and in another table it may not be updated so there is the problem of data inconsistency may occur.
